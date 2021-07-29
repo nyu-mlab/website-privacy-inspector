@@ -58,7 +58,7 @@ const puppeteer = require('puppeteer');
 
 `$  node example.js`
 
-4.	  You should see an “example.png” file as shown below :
+4.	  You should see an “example.png” file in the same directory as example.js.
  
 
 #### Troubleshooting:
