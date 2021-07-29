@@ -32,7 +32,7 @@ After installing Nodejs, we need to install NPM i.e., Node Package Manager using
 ### •	Puppeteer
 Puppeteer is a Node library whose API is used to run and control chrome browser. Puppeteer runs headless chrome by default although it can be configured to run non-headless chrome. To install Puppeteer, use following command:
 
-`$ nvm i puppeteer`
+`$ npm i puppeteer`
 
 Note: Since Puppeteer is a Node library, make sure nodejs and nvm are installed on the system.
 
