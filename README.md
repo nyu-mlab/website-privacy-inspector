@@ -98,7 +98,7 @@ const browser = await puppeteer.launch({
 
 
 ### •	Git
-To use blacklight, we need to clone the blacklight-collector git repository. For that we need to install git on the linux machine. Use below steps.
+To use blacklight, we need to clone the blacklight-collector github repository. For that we need to install git on the linux machine. Use below steps.
 
 1)	Check if Git is already installed on your pc using:
 
