@@ -119,3 +119,13 @@ $ git config --global user.email <your github email id>
 After installing git, clone the Blacklight repository using:
 
 `$ git clone https://github.com/the-markup/blacklight-collector.git`
+
+#### Build
+After cloning Blacklight, we need to install and build in order to run scripts.
+1) To install run
+
+`npm install`
+
+2) To build run
+
+`npm run build`
