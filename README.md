@@ -150,3 +150,9 @@ A browser is also required to run the API. Lynx has been used here but any other
 
 
 `$ sudo apt install lynx`
+
+###Running the website privacy inspector
+
+use the browser lynx here to call the API
+
+'lynx http://127.0.0.1:8000/<list of urls to be tested separated by a comma>'
