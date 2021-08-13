@@ -151,7 +151,7 @@ A browser is also required to run the API. Lynx has been used here but any other
 
 `$ sudo apt install lynx`
 
-###Running the website privacy inspector
+### Running the website privacy inspector
 
 Run the main app (in main.py) file using hypercorn 
 
