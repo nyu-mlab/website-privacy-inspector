@@ -129,3 +129,24 @@ After cloning Blacklight, we need to install and build in order to run scripts.
 2) To build run
 
 `npm run build`
+
+
+## RUNNING THE WEBSITE PRIVACY INSPECTOR
+
+The website privacy inspector is built using FAST API 
+
+### Setup
+Python is required to run FAST API.Install python if not already present.
+
+After installing python, install  using:
+
+`$ pip install fastapi`
+
+An ASGI server is required to for production e.g. uvicorn or hypercorn:
+
+`$ pip install hypercorn`
+
+A browser is also required to run the API. Lynx has been used here but any other browser can be used too. Lynx is installed using:
+
+
+`$ sudo apt install lynx`
