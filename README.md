@@ -146,17 +146,23 @@ An ASGI server is required to for production e.g. uvicorn or hypercorn:
 
 `$ pip install hypercorn`
 
-A browser is also required to run the API. Lynx has been used here but any other browser can be used too. Lynx is installed using:
-
-
-`$ sudo apt install lynx`
 
 ### Running the website privacy inspector
 
-Run the main app (in main.py) file using hypercorn 
+Run the main app (in main.py) file using hypercorn.
 
 `hypercorn main:app`
 
-use the browser lynx here to call the API
+The above command runs the on the loopback IP. To globally access it, run as below
 
-`lynx http://127.0.0.1:8000/{list of urls to be tested separated by a comma}`
+`hypercorn main:app --bind 0.0.0.0:80`
+
+to access the API, use one of the following
+
+1) Run on browser using the serverIP
+
+`<Server IP:80/docs`
+
+2) Run using curl
+
+`curl -X POST "http://<Server IP>/privacy/" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"urls":[<list of Urls to be tested>]}'`
