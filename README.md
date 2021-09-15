@@ -166,3 +166,5 @@ to access the API, use one of the following
 2) Run using curl
 
 `curl -X POST "http://<Server IP>/privacy/" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"urls":[<list of Urls to be tested>]}'`
+
+A logfile(logFile.txt) is created in the current directory which records all the progress and can be used for troubleshooting. 
