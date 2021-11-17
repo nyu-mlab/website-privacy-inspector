@@ -48,7 +48,7 @@ async def create_item(url_list: Urls):
 
     if not (encoded_url_uncached == []):
         log = log + str(datetime.now()) + " Uncached URLs sent to blacklight for inspection \n " 
-        subprocess.run(["node", "example.js", encoded_url_str, log, url_hash_str])
+        subprocess.run(["node", "blacklight.js", encoded_url_str, log, url_hash_str])
         log = ""
     
     current_path = os.getcwd()
