@@ -98,13 +98,13 @@ const browser = await puppeteer.launch({
 
 ##### In case below error is observed
 
+```
 node:internal/modules/cjs/loader:936
-
   throw err;
   ^
 
-
 Error: Cannot find module 'semver'
+```
 
 Run the below commands on the terminal
 
