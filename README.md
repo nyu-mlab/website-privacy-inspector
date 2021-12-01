@@ -63,7 +63,7 @@ const puppeteer = require('puppeteer');
 
 #### Troubleshooting:
 
-In case the below error is observed,
+##### In case the below error is observed,
 
 `(node:50464) UnhandledPromiseRejectionWarning: Error: Failed to launch the browser process!`
 
@@ -95,6 +95,27 @@ const browser = await puppeteer.launch({
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 ```
+
+##### In case below error is observed
+
+node:internal/modules/cjs/loader:936
+
+  throw err;
+  ^
+
+
+Error: Cannot find module 'semver'
+
+Run the below commands on the terminal
+
+`sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node* ~/.npm`
+`sudo rm -rf /usr/local/lib/node*`
+`sudo rm -rf /usr/local/bin/node*`
+`sudo rm -rf /usr/local/include/node*`
+
+`sudo apt-get purge nodejs npm`
+`sudo apt autoremove`
+`sudo apt-get install nodejs npm`
 
 
 ### •	Git
