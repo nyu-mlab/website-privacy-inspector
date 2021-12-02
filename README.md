@@ -151,11 +151,11 @@ After installing git, clone the Blacklight repository using:
 
 #### Build
 After cloning Blacklight, we need to install and build in order to run scripts.
-1) To install run
+1) To install , go to the `blacklight-collector` directory and run
 
 `npm install`
 
-2) To build run
+2) To build run in the same `blacklight-collector` directory
 
 `npm run build`
 
