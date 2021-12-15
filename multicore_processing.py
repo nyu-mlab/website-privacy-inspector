@@ -39,4 +39,4 @@ if __name__ == '__main__':
         p.map(post_request, data_list)
     end_time = time.time()
     time_diff = end_time - start_time
-    print(time_diff)
+    print("Time taken by execution is", time_diff)
