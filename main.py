@@ -61,7 +61,8 @@ async def create_item(url_list: Urls):
     i = 0
     log = log + str(datetime.now()) + "  Integrating results to create a json response \n"
     
-    #The results of blacklight are stored in a file inspection.json in the hashed folder for each url. Below we search for all the urls' results in order to integrate them as a json  
+    #The results of blacklight are stored in a file inspection.json in the hashed folder for each url.
+    #Below we search for all the urls' results in order to integrate them as a json.  
     for url_hash in url_hash_list:
         path = url_hash
         search_path = current_path + "/"+path
