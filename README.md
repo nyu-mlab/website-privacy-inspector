@@ -202,3 +202,5 @@ A logfile(logFile.txt) is created in the current directory which records all the
 ### Using Multiple Cores
 
 We can use multiple cores to initiate parallel processes and get results faster. In the file `multicore_processing.py`, we have used the `Pool` Class of Python's `Multiprocessing` Module to execute processing using multiple cores.  It takes urls saved in file data.csv as input. Although it can be manipulated to fetch data from a database.
+
+![image](https://user-images.githubusercontent.com/26647470/146258384-b0e6223b-48c5-42dd-8f9f-9fecb9a13907.png)
