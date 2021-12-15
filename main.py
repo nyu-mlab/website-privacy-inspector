@@ -30,12 +30,15 @@ async def create_item(url_list: Urls):
         url_hash = hashlib.sha256(url.encode('utf-8')).hexdigest()
         url_hash_list.append(url_hash)
         log = log + str(datetime.now()) + "  "+ url + "  hashed to  " + url_hash +"\n" 
+        
+        #encoding url
         url_64 = base64.urlsafe_b64encode(url.encode("ascii")).decode("ascii")
         encoded_url_list.append(url_64)
+        
         log = log + str(datetime.now()) + "  "+ url + "  converted to  " + url_64 +"\n"  
         path = url_hash
+        
         if not (os.path.isdir(path)):
-            #print("inside if")
             log = log + str(datetime.now()) + " " + url + "is not cached \n"
             encoded_url_uncached.append(url_64)
             url_hash_list_uncached.append(url_hash)
@@ -46,6 +49,7 @@ async def create_item(url_list: Urls):
     encoded_url_str = ",".join(encoded_url_uncached)
     url_hash_str = ",".join(url_hash_list_uncached)
 
+    # Below all uncached urls are sent to blacklight.js
     if not (encoded_url_uncached == []):
         log = log + str(datetime.now()) + " Uncached URLs sent to blacklight for inspection \n " 
         subprocess.run(["node", "blacklight.js", encoded_url_str, log, url_hash_str])
