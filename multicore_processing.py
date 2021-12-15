@@ -36,7 +36,7 @@ if __name__ == '__main__':
     
     #we use the Pool class to initiate multiple processes for multiprocessing
     with multiprocessing.Pool() as p:
-        print(p.map(post_request, data_list))
+        p.map(post_request, data_list)
     end_time = time.time()
     time_diff = end_time - start_time
     print(time_diff)
