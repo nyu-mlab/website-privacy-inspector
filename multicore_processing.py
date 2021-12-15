@@ -29,8 +29,11 @@ if __name__ == '__main__':
         data_part = {"urls": url_list[start_index: i].values.tolist()}
         data_list.append(data_part)
         start_index = i
-        if start_index < no_of_urls:
-            data_list[-1]["urls"] += url_list[start_index :].values.tolist()
+    if start_index < no_of_urls and (start_index+ (no_of_urls//no_of_cores_used)) > no_of_urls:
+        data_list[-1]["urls"] += url_list[start_index :].values.tolist()
+    else:
+        if (start_index+ (no_of_urls//no_of_cores_used)) == no_of_urls:
+            data_list.append({"urls": url_list[start_index: ].values.tolist()})
 
     start_time = time.time()
     
