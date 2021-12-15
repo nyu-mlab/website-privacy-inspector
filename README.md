@@ -196,4 +196,9 @@ to access the API, use one of the following
 
 `curl -X POST "http://<Server IP>/privacy/" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"urls":[<list of Urls to be tested>]}'`
 
-A logfile(logFile.txt) is created in the current directory which records all the progress and can be used for troubleshooting. 
+A logfile(logFile.txt) is created in the current directory which records all the progress and can be used for troubleshooting. The results are stored in /output_directory folder.
+
+
+### Using Multiple Cores
+
+We can use multiple cores to initiate parallel processes and get results faster. In the file `multicore_processing.py`, we have used the `Pool` Class of Python's `Multiprocessing` Module to execute processing using multiple cores.  It takes urls saved in file data.csv as input. Although it can be manipulated to fetch data from a database.
