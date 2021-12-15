@@ -3,11 +3,14 @@ const { join } = require("path");
 const fs = require('fs');
 (async () => {
  const EMULATE_DEVICE = "";
-          // Save the results to a folder
+       
         let OUT_DIR = true;
+	
+	//Below we read the arguments passed from main.py
         const URL = process.argv[2];
         var log = process.argv[3];
         const hashes = process.argv[4];
+	
         console.log(hashes)
         var url_list = URL.split(",");
         var url_hash_list = hashes.split(",");
@@ -19,12 +22,15 @@ const fs = require('fs');
         console.log(log);
         for(let i =0;i<url_list.length;i++)
         {
-     date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         dateTime = date+ " " +time;
+	
+	//decoding the encoded urls
         var url_base64 = url_list[i];
         var buff = Buffer.from(url_base64, 'base64');
         var url = buff.toString('utf-8');
+		
         date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         dateTime = date+ " " +time;
@@ -37,6 +43,8 @@ const fs = require('fs');
         emulateDevice: EMULATE_DEVICE,
         };
         fs.writeFileSync('logfile.txt',log);
+	
+	//saving the results to output_directory folder in the parent directory
         var destination_folder ="output_directory/"+ url_hash_list[i]
 	var result = await collector(
         OUT_DIR
