@@ -45,13 +45,14 @@ const fs = require('fs');
         fs.writeFileSync('logfile.txt',log);
 	
 	//saving the results to output_directory folder in the parent directory
-        var destination_folder ="output_directory/"+ url_hash_list[i]
+        //var destination_folder ="output_directory/"+ url_hash_list[i]
+	var destination_folder = url_hash_list[i]
 	var result = await collector(
         OUT_DIR
         ? { ...defaultConfig, ...{ outDir: join(__dirname, destination_folder) } }
          : defaultConfig);
                   if (OUT_DIR) {
-                              console.log( `For captured data please look in ${{join(__dirname, destination_folder)}`);
+                              console.log( 'For captured data please look in ${{join(__dirname, destination_folder)}');
                             }
         }
 })();
